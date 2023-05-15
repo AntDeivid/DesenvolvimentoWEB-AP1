@@ -1,0 +1,4 @@
+Considere o seguinte cenário:
+Você tem uma “árvore” de componentes React. Seu componente “D” precisa que o “A” (raíz) passe algo para ele. Institivamente, a ideia de passar por props vem à mente, no entanto, isso pode não ser bom em alguns casos, como este. Você teria que passar o desejado por todos os componentes no caminho entre A e D, sendo que estes no caminho não irão precisar desse prop. Isso se chama prop drilling, a perfuração de todos os componentes.
+
+No entanto, este problema pode ser resolvido com o uso de Contextos (contexts) do React. A partir da criação de um contexto (createContext()), você pode prover o que iria passar por props ao contexto e, assim, usar isso apenas no componente filho desejado (useContext()). Dessa forma, não é necessária a perfuração de props, passar os props por todos os componentes até chegar no desejado.
